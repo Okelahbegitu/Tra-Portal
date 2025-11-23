@@ -13,7 +13,7 @@
     <header class="sticky top-0 z-50 bg-palette-3">
         <nav class="w-full flex justify-between text-white p-4">
             <h1 class="font-bold text-2xl">Tra-Portal</h1>
-            <a href="signup.php" class="p-3 font-bold bg-palette-4 rounded-3xl">Login!</a>
+            <a href="#" class="p-3 font-bold bg-palette-4 rounded-3xl">Login!</a>
         </nav>
     </header>
 
@@ -85,9 +85,9 @@
         </div>
     </div>
 
-    <div class="bg-palette-4 text-center  text-white">
+    <div class="bg-palette-4 text-center h-50 text-white">
         <h1 class="text-5xl font-bold ">Tentang Kami</h1>
-        <p class="mt=2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        <p class="mt-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex
             ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
@@ -97,9 +97,30 @@
     <div class="flex justify-center mt-7 ">
         <a href="#" class="p-3 font-bold bg-palette-1 text-center  rounded-3xl">Checkout sekarang!</a>
     </div>
-    <div class="bg-gray-400 w-auto h-3 mt-8"></div>
+    <div class="bg-gray-400 w-auto h-10 mt-8"></div>
 
+    <?php if (empty($reviews)): ?>
 
+        <div class="grid grid-cols-3 gap-2.5">
+
+            <div class="card w-auto h-auto m-2 p-4 ">
+                <div class="flex justify-start items-center">
+                    <div class="rounded-full bg-amber-200 w-15 h-15"></div>
+                    <h2 class="text-4xl font-bold ml-2">Name</h2>
+                </div>
+                <div class="flex justify-end">
+                    <a href="#" class="flex  p-3 mt-3 font-bold bg-palette-4 rounded-3xl text-white">
+                        Pesan
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    <?php else: ?>
+        <div class="h-100 flex justify-center text-center items-center">
+            <h2>Belum ada review :(</h2>
+        </div>
+    <?php endif; ?>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
