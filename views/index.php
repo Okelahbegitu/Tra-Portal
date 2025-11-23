@@ -13,7 +13,7 @@
     <header class="sticky top-0 z-50 bg-palette-3">
         <nav class="w-full flex justify-between text-white p-4">
             <h1 class="font-bold text-2xl">Tra-Portal</h1>
-            <a href="#" class="p-3 font-bold bg-palette-4 rounded-3xl">Login!</a>
+            <a href="signup.php" class="p-3 font-bold bg-palette-4 rounded-3xl">Login!</a>
         </nav>
     </header>
 
