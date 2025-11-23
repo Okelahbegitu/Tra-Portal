@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+    /* Definisikan warna custom dengan prefix --color- */
+    --color-palette-1: #F1F3E0;
+    --color-palette-2: #D2DCB6;
+    --color-palette-3: #A1BC98;
+    --color-palette-4: #778873;
+}
+
+@layer utilities {
+  .brand-bullet {
+    @apply w-3 h-3 bg-palette-3  opacity-40 mx-2;
+  }
+
+  .brand-bullet-active {
+    @apply bg-red-800 scale-150 rounded-full opacity-100;
+  }
+}
+
+@layer components {
+  .card{
+    background-color: var(--color-white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+}
