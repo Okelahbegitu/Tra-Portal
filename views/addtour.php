@@ -53,12 +53,6 @@
     </aside>
 
     <main class="flex-1 p-4 overflow-auto h-146">
-        <div class="flex items-center gap-4 mb-6">
-            <a href="tourmanage.php" class="flex items-center gap-2 text-palette-4 hover:text-palette-3 transition-all duration-300">
-                <i data-lucide="arrow-left" class="w-5 h-5"></i>
-                <span>Back to Tour Manage</span>
-            </a>
-        </div>
 
         <div class="max-w-4xl mx-auto">
             <header class="mb-8">
