@@ -62,7 +62,7 @@
                     ADD NEW ORDER
                 </h1>
                 <p class="text-xl mt-2 flex items-center gap-2">
-                    TAMBAH PESANAN BARU KE DALAM SISTEM
+                    TAMBAH PESANAN BARU
                 </p>
             </header>
 
@@ -76,13 +76,8 @@
                                 ORDER ID
                             </label>
                             <div class="relative">
-                                <input type="text" class="w-full border border-palette-3 rounded-lg px-4 py-3 focus:border-palette-4 bg-gray-100" placeholder="Auto generated" disabled>
-                                <i data-lucide="cpu" class="w-4 h-4 absolute right-3 top-3.5 text-gray-500"></i>
+                                <input type="text" class="w-full border border-palette-3 rounded-lg px-4 py-3 focus:border-palette-4 bg-gray-100" disabled>
                             </div>
-                            <p class="text-xs text-gray-500 mt-1 flex items-center gap-1">
-                                <i data-lucide="info" class="w-3 h-3"></i>
-                                ID akan digenerate otomatis oleh sistem
-                            </p>
                         </div>
                         <div>
                             <label class="text-sm font-semibold mb-2 flex items-center gap-2">

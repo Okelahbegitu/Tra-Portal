@@ -285,9 +285,6 @@
   .mt-auto {
     margin-top: auto;
   }
-  .mr-2 {
-    margin-right: calc(var(--spacing) * 2);
-  }
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
   }
@@ -314,9 +311,6 @@
   }
   .grid {
     display: grid;
-  }
-  .inline-block {
-    display: inline-block;
   }
   .h-3 {
     height: calc(var(--spacing) * 3);

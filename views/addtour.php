@@ -75,10 +75,6 @@
                                 ID Wisata
                             </label>
                             <input type="text" class="w-full border border-palette-3 rounded-lg px-4 py-3 focus:border-palette-4 bg-gray-100" disabled>
-                            <p class="text-xs text-gray-500 mt-1 flex items-center gap-1">
-                                <i data-lucide="info" class="w-3 h-3"></i>
-                                ID akan digenerate otomatis oleh sistem
-                            </p>
                         </div>
                         <div>
                             <label class="text-sm font-semibold mb-2 flex items-center gap-2">
