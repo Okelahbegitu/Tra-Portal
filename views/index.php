@@ -55,9 +55,15 @@
             <h3 class="text-3xl">Pantai</h3>
             <h2 class="text-4xl font-bold">Rp 1.000.000</h2>
             <div class="flex justify-end">
-                <a href="detailpantai.php" class="flex  p-3 mt-3 font-bold bg-palette-4 rounded-3xl text-white">
+                <a href="detailclient.php?nama=Pantai+Indah
+  &harga=1000000
+  &gambar=https://placehold.co/600x400
+  &deskripsi=Pantai+Indah+adalah+destinasi+wisata+terbaik+dengan+pemandangan+sunset+yang+luar+biasa.
+  &lokasi=Bali" class="flex p-3 mt-3 font-bold bg-palette-4 rounded-3xl text-white">
                     Pesan
                 </a>
+
+
             </div>
 
         </div>
@@ -66,7 +72,8 @@
             <h3 class="text-3xl">Sejarah</h3>
             <h2 class="text-4xl font-bold">Rp 1.000.000</h2>
             <div class="flex justify-end">
-                <a href="detailclient.php" class="flex  p-3 mt-3 font-bold bg-palette-4 rounded-3xl text-white">
+                <a href="detailclient.php?nama=Sejarah+Kota&harga=1000000&gambar=https://placehold.co/600x400&deskripsi=Wisata+sejarah+menarik&lokasi=Jakarta"
+                    class="flex  p-3 mt-3 font-bold bg-palette-4 rounded-3xl text-white">
                     Pesan
                 </a>
             </div>
@@ -77,7 +84,8 @@
             <h3 class="text-3xl">Gunung</h3>
             <h2 class="text-4xl font-bold">Rp 1.000.000</h2>
             <div class="flex justify-end">
-                <a href="detailclient.php" class="flex  p-3 mt-3 font-bold bg-palette-4 rounded-3xl text-white">
+                <a href="detailclient.php?nama=Gunung+Indah&harga=1000000&gambar=https://placehold.co/600x400&deskripsi=Pendakian+seru&lokasi=Papua"
+                    class="flex  p-3 mt-3 font-bold bg-palette-4 rounded-3xl text-white">
                     Pesan
                 </a>
             </div>
