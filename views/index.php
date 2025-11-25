@@ -52,10 +52,10 @@
     <div class="flex justify-between">
         <div class="card w-auto h-auto m-2 p-4 ">
             <img class="block" src="https://placehold.co/400x300">
-            <h3 class="text-3xl">nama</h3>
+            <h3 class="text-3xl">Pantai</h3>
             <h2 class="text-4xl font-bold">Rp 1.000.000</h2>
             <div class="flex justify-end">
-                <a href="#" class="flex  p-3 mt-3 font-bold bg-palette-4 rounded-3xl text-white">
+                <a href="detailpantai.php" class="flex  p-3 mt-3 font-bold bg-palette-4 rounded-3xl text-white">
                     Pesan
                 </a>
             </div>
@@ -63,10 +63,10 @@
         </div>
         <div class="card w-auto h-auto m-2 p-4 ">
             <img class="block" src="https://placehold.co/400x300">
-            <h3 class="text-3xl">nama</h3>
+            <h3 class="text-3xl">Sejarah</h3>
             <h2 class="text-4xl font-bold">Rp 1.000.000</h2>
             <div class="flex justify-end">
-                <a href="#" class="flex  p-3 mt-3 font-bold bg-palette-4 rounded-3xl text-white">
+                <a href="detailclient.php" class="flex  p-3 mt-3 font-bold bg-palette-4 rounded-3xl text-white">
                     Pesan
                 </a>
             </div>
@@ -74,10 +74,10 @@
         </div>
         <div class="card w-auto h-auto m-2 p-4 ">
             <img class="block" src="https://placehold.co/400x300">
-            <h3 class="text-3xl">nama</h3>
+            <h3 class="text-3xl">Gunung</h3>
             <h2 class="text-4xl font-bold">Rp 1.000.000</h2>
             <div class="flex justify-end">
-                <a href="#" class="flex  p-3 mt-3 font-bold bg-palette-4 rounded-3xl text-white">
+                <a href="detailclient.php" class="flex  p-3 mt-3 font-bold bg-palette-4 rounded-3xl text-white">
                     Pesan
                 </a>
             </div>
