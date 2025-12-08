@@ -1,3 +1,27 @@
+<?php
+include '../config/conn.php';
+global $conn;
+if (isset($_POST['signin'])) {
+    $query = "SELECT * FROM tb_akun WHERE username = ? AND password = ?";
+    $stmt = mysqli_prepare($conn, $query);
+
+    mysqli_stmt_bind_param($stmt, "ss", $_POST['username'], $_POST['password']);
+
+    mysqli_stmt_execute($stmt);
+
+    $result = mysqli_stmt_get_result($stmt);
+
+    $account = [];
+    while ($row = mysqli_fetch_assoc($result)) {
+        $account[] = $row;
+    }
+
+    if ($account[0]['role'] == "admin") {
+        header("Refresh: 0.1; url=adminpanel.php");
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,7 +46,7 @@
             <h1 class="text-4xl md:text-5xl font-black text-palette-4 mb-4">BACK</h1>
             <p class="text-xl text-palette-3 mb-8">Login to your account</p>
 
-            <form class="m-10">
+            <form class="m-10" method="post">
                 <div>
                     <label for="username" class="block text-palette-4 text-sm font-semibold mb-2">Username</label>
                     <input type="text" id="username" name="username" required
@@ -35,14 +59,15 @@
                         class="w-full form-input px-4 py-3 border border-palette-3 rounded-lg bg-white text-gray-900 focus:border-palette-4">
                 </div>
                 <a href="signup.php">Tidak Punya Akun?</a>
-                <button type="submit"
+                <button type="submit" name="signin"
                     class="w-full py-3 bg-palette-4 text-white text-base font-bold rounded-lg cursor-pointer hover:bg-opacity-90 transition-all duration-300 mt-6">
                     Login
                 </button>
             </form>
         </div>
         <div class="w-full">
-            <img class="w-full h-auto" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/00/9b/17/benua-patra-beach.jpg?w=900&h=500&s=1">
+            <img class="w-full h-auto"
+                src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/00/9b/17/benua-patra-beach.jpg?w=900&h=500&s=1">
         </div>
     </div>
 
