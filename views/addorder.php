@@ -176,7 +176,7 @@
                             <i data-lucide="x" class="w-5 h-5"></i>
                             Cancel
                         </a>
-                        <button type="button" class="bg-palette-3 text-white px-6 py-3 rounded-lg font-semibold hover:bg-palette-4 transition-all duration-300 flex items-center gap-2 justify-center flex-1">
+                        <button type="submit" class="bg-palette-3 text-white px-6 py-3 rounded-lg font-semibold hover:bg-palette-4 transition-all duration-300 flex items-center gap-2 justify-center flex-1">
                             <i data-lucide="save" class="w-5 h-5"></i>
                             Save Order
                         </button>

@@ -9,7 +9,7 @@
 </head>
 <body class="flex h-100 bg-palette-1">
     <!-- Sidebar -->
-    <aside class="w-50 bg-palette-4 text-white flex flex-col p-4 h-146">
+    <aside class="w-50 bg-palette-4 text-white flex flex-col p-4 min-h-full">
         <div>
             <div class="text-2xl font-black mb-2">TOUR ADMIN</div>
             <div class="text-sm font-semibold mb-8">ADMINISTRATION PANEL</div>
