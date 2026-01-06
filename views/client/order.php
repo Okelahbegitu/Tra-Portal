@@ -1,6 +1,12 @@
 <?php
 include '../../config/conn.php';
 session_start();
+
+
+if($_SESSION['role'] != "client"){
+    header("Refresh: 0.1; url=signin.php");
+}
+
 global $conn;
 $data = [];
 $stmt = mysqli_prepare($conn, "SELECT ord.durasi, ord.tanggal_kunjungan, ord.tanggal_pemesanan , ord.tanggal_kepulangan, ord.jumlah_pengunjung, ord.total ,w.harga_wisata,  w.nama_wisata FROM tb_pemesanan ord INNER JOIN tbwisata w ON ord.id_wisata = w.id_wisata INNER JOIN tb_akun a ON ord.id_akun = a.id_akun WHERE ord.id_akun = ?");
@@ -64,6 +70,7 @@ while ($row = mysqli_fetch_assoc($result)) {
         </div>
     </main>
 </body>
+
 <script>
     lucide.createIcons();
 

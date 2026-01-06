@@ -36,9 +36,9 @@
             <div class="w-10 h-10 rounded-full bg-palette-3 flex items-center justify-center">
                 <i data-lucide="user" class="w-5 h-5"></i>
             </div>
-            <span>ADMIN USN</span>
+            <span><?=$_SESSION['username']?></span>
         </div>
-        <a href="index.php"
+        <a href="../../signin.php"
             class="flex items-center gap-2.5 p-3 rounded-lg w-full bg-red-800 text-white hover:bg-white hover:text-black transition-all duration-300">
             <i data-lucide="log-out" class="w-5 h-5"></i>
             <span>LOGOUT</span>

@@ -21,15 +21,15 @@
         <div class="swiper-wrapper ">
             <!-- Slides -->
             <div class="swiper-slide">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDxnDcHv7kezWGIWQpU2zL2Q8ZgYCgw9Aq3w&s"
+                <img src="https://ik.imagekit.io/tvlk/blog/2022/11/Telaga-Tulung-Ni-Lenggo-Wisata-Kalimantan-Timur-Shutterstock.jpg?tr=q-70,c-at_max,w-1000,h-600"
                     class="brightness-50 w-full h-120 object-cover">
             </div>
             <div class="swiper-slide">
-                <img src="https://content.r9cdn.net/rimg/dimg/1b/61/ad879e55-city-22380-17ea1cf2107.jpg?crop=true&width=1020&height=498"
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/f4/e1/a9/derawan-archipelago.jpg?w=600&h=600&s=1"
                     class="brightness-50 w-full h-120 object-cover">
             </div>
             <div class="swiper-slide">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDxnDcHv7kezWGIWQpU2zL2Q8ZgYCgw9Aq3w&s"
+                <img src="https://ik.imagekit.io/tvlk/blog/2022/11/Labuan-Cermin-Wisata-Kalimantan-Timur-Shutterstock.jpg?tr=q-70,c-at_max,w-1000,h-600"
                     class="brightness-50 w-full h-120 object-cover">
             </div>
         </div>
@@ -51,15 +51,15 @@
     </div>
     <div class="flex justify-between">
         <div class="card w-auto h-auto m-2 p-4 ">
-            <img class="block" src="https://placehold.co/400x300">
-            <h3 class="text-3xl">Pantai</h3>
+            <img class="block" width="510" height="270" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/58/e5/76/pantai-lamaru.jpg">
+            <h3 class="text-3xl">Pantai Lamaru</h3>
             <h2 class="text-4xl font-bold">Rp 1.000.000</h2>
             <div class="flex justify-end">
-                <a href="detailclient.php?nama=Pantai+Indah
-  &harga=1000000
-  &gambar=https://placehold.co/600x400
-  &deskripsi=Pantai+Indah+adalah+destinasi+wisata+terbaik+dengan+pemandangan+sunset+yang+luar+biasa.
-  &lokasi=Bali" class="flex p-3 mt-3 font-bold bg-palette-4 rounded-3xl text-white">
+                <a href="detailclient.php?nama=Pantai+Lamaru
+                &harga=1000000
+                &gambar=https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/58/e5/76/pantai-lamaru.jpg
+                &deskripsi=Pantai+Lamaru+adalah+destinasi+wisata+terbaik+dengan+pemandangan+sunset+yang+luar+biasa.
+                &lokasi=Balikpapan" class="flex p-3 mt-3 font-bold bg-palette-4 rounded-3xl text-white">
                     Pesan
                 </a>
 
@@ -68,11 +68,11 @@
 
         </div>
         <div class="card w-auto h-auto m-2 p-4 ">
-            <img class="block" src="https://placehold.co/400x300">
-            <h3 class="text-3xl">Sejarah</h3>
+            <img class="block" width="510" height="270" src="https://kaltimtoday.co/wp-content/uploads/2020/02/1-512x270.png">
+            <h3 class="text-3xl">Muesum Mulawarman</h3>
             <h2 class="text-4xl font-bold">Rp 1.000.000</h2>
             <div class="flex justify-end">
-                <a href="detailclient.php?nama=Sejarah+Kota&harga=1000000&gambar=https://placehold.co/600x400&deskripsi=Wisata+sejarah+menarik&lokasi=Jakarta"
+                <a href="detailclient.php?nama=Museum+Mulawarman&harga=1000000&gambar=https://kaltimtoday.co/wp-content/uploads/2020/02/1-512x270.png&deskripsi=Wisata+sejarah+dan+budaya+Kalimantan+Timur&lokasi=Tenggarong"
                     class="flex  p-3 mt-3 font-bold bg-palette-4 rounded-3xl text-white">
                     Pesan
                 </a>
@@ -80,11 +80,11 @@
 
         </div>
         <div class="card w-auto h-auto m-2 p-4 ">
-            <img class="block" src="https://placehold.co/400x300">
-            <h3 class="text-3xl">Gunung</h3>
+            <img class="block" width="510" height="270" src="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxUEshhZ9v4v6We0E8yKH8QSi5iRz0Sz5EHVOx22bfKYny9XGgGSH3vlsnGEaGB4bksVw7LmsHzaV812VbhM2xsCYvZRBOlg0ViXWNV5SyVnrreMRl0qEsa9Q9i_RymOPkGZTOfFW4E-6zu=w810-h468-n-k-no">
+            <h3 class="text-3xl">Gunung Liangpran</h3>
             <h2 class="text-4xl font-bold">Rp 1.000.000</h2>
             <div class="flex justify-end">
-                <a href="detailclient.php?nama=Gunung+Indah&harga=1000000&gambar=https://placehold.co/600x400&deskripsi=Pendakian+seru&lokasi=Papua"
+                <a href="detailclient.php?nama=Gunung+Liangpran&harga=1000000&gambar=https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxUEshhZ9v4v6We0E8yKH8QSi5iRz0Sz5EHVOx22bfKYny9XGgGSH3vlsnGEaGB4bksVw7LmsHzaV812VbhM2xsCYvZRBOlg0ViXWNV5SyVnrreMRl0qEsa9Q9i_RymOPkGZTOfFW4E-6zu=w810-h468-n-k-no&lokasi=Kalimantan+Timur&deskripsi=Gunung+Liangpran+adalah+destinasi+wisata+alam+terbaik+dengan+pemandangan+pegunungan+yang+indah."
                     class="flex  p-3 mt-3 font-bold bg-palette-4 rounded-3xl text-white">
                     Pesan
                 </a>
@@ -148,7 +148,7 @@
                 if (opacity < 1) opacity += 0.02;
 
                 // update style
-                slogan.style.transform = `translateY(${translateY}rem)`;
+                slogan.style.transform = translateY(${translateY}rem);
                 slogan.style.opacity = opacity;
 
                 // hentikan interval jika sudah selesai
@@ -173,8 +173,8 @@
             }
             ,
             navigation: {
-                nextEl: '.brand-next',
-                prevEl: '.brand-prev',
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
             },
         });
     </script>
@@ -184,6 +184,9 @@
     </script>
 
 </body>
+
+
+</html>
 
 
 </html>

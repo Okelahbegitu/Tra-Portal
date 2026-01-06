@@ -1,6 +1,8 @@
 <?php
-include '../../config/conn.php';
+
+include '../config/conn.php';
 global $conn;
+
 if (isset($_POST['signup'])) {
     $Checkquery = mysqli_prepare($conn, "SELECT * FROM tb_akun WHERE username = ? OR email = ?");
 
@@ -47,8 +49,8 @@ if (isset($_POST['signup'])) {
 
     <div class="flex justify-between">
         <div class="bg-palette-2 w-150">
-            <h1 class="text-4xl md:text-5xl font-black text-palette-4 mb-4">HELLO THERE</h1>
-            <p class="text-xl text-palette-3 mb-8">Create your account</p>
+            <h1 class="text-4xl md:text-5xl font-black text-palette-4 mb-4">WELCOME</h1>
+            <p class="text-xl text-palette-3 mb-8">Make your account</p>
 
             <form class="m-10" method="post">
                 <div>
@@ -77,9 +79,11 @@ if (isset($_POST['signup'])) {
         </div>
         <div class="w-full">
             <img class="w-full h-auto"
-                src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/d2/f8/45/photo3jpg.jpg?w=1400&h=800&s=1">
+                src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/00/9b/17/benua-patra-beach.jpg?w=900&h=500&s=1">
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 
 </html>

@@ -240,9 +240,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $idTour) {
     <script>
         lucide.createIcons();
 
-        /** @type {HTMLInputElement} */
-        const Ifile = /** @type {HTMLInputElement} */ document.getElementById('pict');
-        const imgContainer = /** @type {HTMLInputElement} */ document.getElementById("display-container");
+        
+        const Ifile = document.getElementById('pict');
+        const imgContainer =  document.getElementById("display-container");
         const formAddTour = document.getElementById('formAddTour');
 
         Ifile.addEventListener("change", () => {
@@ -318,13 +318,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $idTour) {
 
             // 3. Update UI ke Status Processing
             submittxt.innerText = "Processing...";
-            loadlogo.classList.remove('hidden'); // Munculkan spinner
-            savelogo.classList.add('hidden');    // Sembunyikan icon save
+            loadlogo.classList.remove('hidden');
+            savelogo.classList.add('hidden');   e
 
             try {
                 // 4. Persiapan Data
                 const formdata = new FormData(formAddTour);
-                formdata.delete("pict"); // Hapus input file default jika ada
+                formdata.delete("pict"); 
 
                 // Tambahkan file dari albumArray
                 albumArray.forEach((item) => {

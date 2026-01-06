@@ -1,5 +1,24 @@
+<?php
+include '../../config/conn.php';
+
+session_start();
+
+if($_SESSION['role'] != "admin"){
+    header("Refresh: 0.1; url=signin.php");
+}
+
+global $conn;
+$data = [];
+$stmt = mysqli_prepare($conn, "SELECT ord.durasi, ord.tanggal_kunjungan, ord.tanggal_pemesanan , ord.tanggal_kepulangan, ord.jumlah_pengunjung, ord.total ,w.harga_wisata,  w.nama_wisata, a.username, a.id_akun FROM tb_pemesanan ord INNER JOIN tbwisata w ON ord.id_wisata = w.id_wisata INNER JOIN tb_akun a ON ord.id_akun = a.id_akun ");
+mysqli_stmt_execute($stmt);
+$result = mysqli_stmt_get_result($stmt);
+while ($row = mysqli_fetch_assoc($result)) {
+    $data[] = $row;
+}
+?>
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,50 +26,10 @@
     <link rel="stylesheet" href="../../output.css?v=<?php echo time(); ?>">
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
-<body class="flex h-100 bg-palette-1">
+
+<body class="flex bg-palette-1 overflow-hidden h-screen">
     <!-- Sidebar -->
-    <aside class="w-50 bg-palette-4 text-white flex flex-col p-4 min-h-full">
-        <div>
-            <div class="text-2xl font-black mb-2">TOUR ADMIN</div>
-            <div class="text-sm font-semibold mb-8">ADMINISTRATION PANEL</div>
-            
-            <nav class="mt-6">
-                <ul class="flex flex-col gap-2.5">
-                    <li>
-                        <a href="adminpanel.php" class="flex items-center gap-2.5 p-3 rounded-lg w-full">
-                            <i data-lucide="layout-dashboard" class="w-5 h-5"></i>
-                            <span>DASHBOARD</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="tourmanage.php" class="flex items-center gap-2.5 p-3 rounded-lg w-full">
-                            <i data-lucide="map-pin" class="w-5 h-5"></i>
-                            <span>TOUR MANAGE</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="orderlist.php" class="flex items-center gap-2.5 p-3 rounded-lg bg-palette-3 w-full">
-                            <i data-lucide="list-check" class="w-5 h-5"></i>
-                            <span>ORDER LIST</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        
-        <div class="mt-auto">
-            <div class="flex items-center gap-2.5 mb-4">
-                <div class="w-10 h-10 rounded-full bg-palette-3 flex items-center justify-center">
-                    <i data-lucide="user" class="w-5 h-5"></i>
-                </div>
-                <span>ADMIN USN</span>
-            </div>
-            <a href="index.php" class="flex items-center gap-2.5 p-3 rounded-lg w-full bg-red-800 text-white hover:bg-white hover:text-black transition-all duration-300">
-                <i data-lucide="log-out" class="w-5 h-5"></i>
-                <span>LOGOUT</span>
-            </a>
-        </div>
-    </aside>
+    <?php include '../../component/adminsidebar.php' ?>
 
     <main class="flex-1 p-4 overflow-auto">
         <div>
@@ -60,12 +39,9 @@
             </header>
 
             <div class="flex justify-between mb-4">
-                <a href="addorder.php" class="bg-palette-3 text-white px-4 py-3 rounded-lg font-semibold flex items-center gap-2">
-                    <i data-lucide="plus" class="w-5 h-5"></i>
-                    ADD NEW ORDER
-                </a>
                 <div class="flex items-center gap-2">
-                    <input type="text" placeholder="Search orders..." class="border border-palette-3 rounded-lg px-4 py-3 w-150">
+                    <input type="text" placeholder="Search orders... (username)" id="Search"
+                        class="border border-palette-3 rounded-lg px-4 py-3 w-150">
                     <button class="bg-palette-4 text-white px-4 py-3 rounded-lg">
                         <i data-lucide="search" class="w-5 h-5"></i>
                     </button>
@@ -77,48 +53,71 @@
                     <table class="w-full">
                         <thead>
                             <tr class="border-b border-palette-3">
-                                <th class="text-left py-3 px-4">ORDER ID</th>
-                                <th class="text-left py-3 px-4">NAMA PELANGGAN</th>
-                                <th class="text-left py-3 px-4">EMAIL PELANGGAN</th>
-                                <th class="text-left py-3 px-4">TANGGAL PESAN</th>
-                                <th class="text-left py-3 px-4">NAMA WISATA</th>
-                                <th class="text-left py-3 px-4">LOKASI</th>
-                                <th class="text-left py-3 px-4">HARGA</th>
-                                <th class="text-left py-3 px-4">STATUS</th>
-                                <th class="text-left py-3 px-4">AKSI</th>
+                                <th class="text-left py-3 px-4">NO</th>
+                                <th class="text-left py-3 px-4">Username</th>
+                                <th class="text-left py-3 px-4">Nama Wisata</th>
+                                <th class="text-left py-3 px-4">Jumlah orang</th>
+                                <th class="text-left py-3 px-4">Durasi (Hari)</th>
+                                <th class="text-left py-3 px-4">Tanggal Keberangkatan</th>
+                                <th class="text-left py-3 px-4">Tanggal Kepulangan</th>
+                                <th class="text-left py-3 px-4">Tanggal Pemesanan</th>
+                                <th class="text-left py-3 px-4">Harga Wisata</th>
+                                <th class="text-left py-3 px-4">Total</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="border-b border-palette-3">
-                                <td class="py-3 px-4">1</td>
-                                <td class="py-3 px-4">udin</td>
-                                <td class="py-3 px-4">udin@example.com</td>
-                                <td class="py-3 px-4">2024-06-01</td>
-                                <td class="py-3 px-4">dwasdwadw</td>
-                                <td class="py-3 px-4">dwasdwa</td>
-                                <td class="py-3 px-4">Rp. 1234</td>
-                                <td class="py-3 px-4">
-                                    <span class="bg-palette-3 text-white px-2 py-1 rounded-lg text-sm">Active</span>
-                                </td>
-                                <td class="py-3 px-4 flex gap-2">
-                                    <button class="text-palette-4 hover:text-palette-3 transition-all duration-300">
-                                        <i data-lucide="edit" class="w-4 h-4"></i>
-                                    </button>
-                                    <button class="text-red-800 hover:text-red-600 transition-all duration-300">
-                                        <i data-lucide="trash-2" class="w-4 h-4"></i>
-                                    </button>
-                                </td>
-                            </tr>
+                            <?php $i = 1;
+                            foreach ($data as $history): ?>
+                                <tr data-order="<?= $history['username'] ?>"
+                                    class="border-b border-palette-3">
+                                    <th><?= $i++ ?></th>
+                                    <th class="text-left py-3 px-4"><?= $history['username'] ?></th>
+
+                                    <th class="text-left py-3 px-4"><?= $history['nama_wisata'] ?></th>
+                                    <th class="text-left py-3 px-4"><?= $history['jumlah_pengunjung'] ?></th>
+                                    <th class="text-left py-3 px-4"><?= $history['durasi'] ?></th>
+                                    <th class="text-left py-3 px-4"><?= $history['tanggal_kunjungan'] ?></th>
+                                    <th class="text-left py-3 px-4"><?= $history['tanggal_kepulangan'] ?></th>
+                                    <th class="text-left py-3 px-4"><?= $history['tanggal_pemesanan'] ?></th>
+                                    <th class="text-left py-3 px-4"><?= $history['harga_wisata'] ?></th>
+                                    <th class="text-left py-3 px-4"><?= $history['total'] ?></th>
+                                </tr>
+                            <?php endforeach ?>
                         </tbody>
                     </table>
                 </div>
             </div>
-            </div>
+        </div>
         </div>
     </main>
 
     <script>
         lucide.createIcons();
+
+        const search = document.getElementById("Search");
+        search.addEventListener('input', () => {  
+            const value = search.value.trim().toLowerCase();    // ambil nilai input
+
+
+            const data = document.querySelectorAll('[data-order]');
+
+            data.forEach((item) =>{
+                if (value === ''){
+                    item.classList.remove("hidden")
+                    return
+                }
+
+                if (value == item.dataset.order.toLowerCase()){
+                    item.classList.remove("hidden")
+                } else {
+                    item.classList.add("hidden")
+                }
+            })
+
+
+        });
+
     </script>
 </body>
+
 </html>
